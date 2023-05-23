@@ -34,7 +34,7 @@ public class CamelSample {
             @Override
             public void configure() {
                 from("timer:foo")
-                        .bean(ClojureCamelBean.class, "testFoo")
+                        .bean(ClojureCamelBean.class, "getWeatherByCity('London')")
                         .log("He ${body}");
             }
         };
